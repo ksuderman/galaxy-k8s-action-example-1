@@ -22,10 +22,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: ksuderman/github-action-galaxy-k8s@v1
+      - uses: ksuderman/github-action-galaxy-k8s@dev
         with:
           api-key: secret
-          values_file: ${{ inputs.values-file }}
+          values-file: ${{ inputs.values-file }}
 
       - name: Install ABM
         shell: bash
