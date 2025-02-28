@@ -26,6 +26,7 @@ jobs:
         with:
           api-key: secret
           values-file: ${{ inputs.values-file }}
+          admin-users: admin@example.com
 
       - name: Install ABM
         shell: bash
