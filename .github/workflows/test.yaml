@@ -35,7 +35,9 @@ jobs:
         shell: bash
         run: |        
           # Configure ABM
-          mkdir -p $HOME/.abm
+          echo "Home is $HOME"
+          echo "Current dir is $(pwd)"
+          mkdir -p .abm
           abm config create localhost $HOME/.kube/config
           abm config key localhost secret
           abm config url localhost http://localhost
