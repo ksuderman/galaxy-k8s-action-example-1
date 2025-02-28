@@ -41,7 +41,7 @@ jobs:
           echo "Home is $HOME"
           echo "Current dir is $(pwd)"
           mkdir -p .abm
-          mkidr -p $HOME/.abm
+          mkdir -p $HOME/.abm
           abm config create localhost $HOME/.kube/config
           abm config list
           echo ".abm directory listing"
