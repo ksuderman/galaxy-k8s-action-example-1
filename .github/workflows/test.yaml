@@ -44,8 +44,6 @@ jobs:
         shell: bash
         run: |        
           # Configure ABM
-          echo "Home is $HOME"
-          echo "Current dir is $(pwd)"
           mkdir -p .abm
           cat > .abm/profile.yml << EOF
           localhost:
@@ -54,9 +52,6 @@ jobs:
             kube: .kube/config
           EOF
           abm config list
-          echo ".abm directory listing"
-          ls -al .abm
-          cat .abm/profile.yml
           # Create a Galaxy user and an API key
           key=$(abm localhost user create admin admin@example.com galaxypassword | jq -r .key)
           abm config key localhost $key
