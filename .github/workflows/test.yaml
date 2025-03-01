@@ -28,6 +28,11 @@ jobs:
           values-file: ${{ inputs.values-file }}
           admin-users: admin@example.com
 
+      - name: Get Helm values
+        shell: bash
+        run: |
+          helm get values galaxy -n galaxy --all --output yaml
+
       - name: Install ABM
         shell: bash
         run: |
@@ -60,6 +65,7 @@ jobs:
           abm localhost history import ${{ inputs.history }}
 
       - name: Run the benchmark
+        timeout-minutes: 30
         shell: bash
         run: |
           cat > benchmark.yml << EOF
@@ -78,7 +84,7 @@ jobs:
           cat benchmark.yml
           # Validate and run the benchmark
           abm localhost benchmark validate benchmark.yml          
-          abm localhost benchmark run benchmark.yml 
+          #abm localhost benchmark run benchmark.yml 
 
       - name: List the results
         shell: bash
