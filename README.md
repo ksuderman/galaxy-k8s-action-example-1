@@ -1,8 +1,8 @@
-# Example of using the galaxy-k8s-action with ABM 
+# Example 1 of using the galaxy-k8s-action with ABM 
 
 This is an example repository showing how to use the [galaxy-k8s-action](https://github.com/ksuderman/galaxy-k8s-action), used for installing Galaxy onto Kubernetes, with [abm](https://github.com/galaxyproject/gxabm) used to run Galaxy workflows.
 
-This example defines all of the `abm` configuration in the workflow.  See [this repository]() for an exmple of using `galaxy-k8s-action` with `abm` using configuration files included in the repository.
+This example defines all of the `abm` configuration in the workflow.  See [this repository](https://github.com/ksuderman/galaxy-k8s-action-example-2) for an exmple of using `galaxy-k8s-action` with `abm` using configuration files included in the repository.
 
 ## Example workflow
 ```yaml
