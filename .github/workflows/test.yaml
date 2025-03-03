@@ -31,7 +31,7 @@ jobs:
       - name: Get Helm values
         shell: bash
         run: |
-          helm get values galaxy -n galaxy --all --output yaml
+          sudo helm get values galaxy -n galaxy --all --output yaml
 
       - name: Install ABM
         shell: bash
@@ -79,7 +79,7 @@ jobs:
           cat benchmark.yml
           # Validate and run the benchmark
           abm localhost benchmark validate benchmark.yml          
-          #abm localhost benchmark run benchmark.yml 
+          abm localhost benchmark run benchmark.yml 
 
       - name: List the results
         shell: bash
