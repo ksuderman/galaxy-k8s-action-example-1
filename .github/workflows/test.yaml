@@ -16,7 +16,7 @@ on:
 jobs:
   install-galaxy:
     name: Install Galaxy and run a benchmark with ABM
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
         with:
