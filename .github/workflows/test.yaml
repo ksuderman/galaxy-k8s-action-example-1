@@ -11,12 +11,12 @@ on:
         required: true
       history:
         description: 'URL to an exported Galaxy history to use for the benchmark'
-        default: https://benchmarking-inputs.s3.amazonaws.com/Variant/Variant-calling-inputs---2GB.rocrate.zip
+        default: https://benchmarking-inputs.s3.amazonaws.com/ERR3485802/Galaxy-History-VC-Test-Data.tar.gz
         required: true
 jobs:
   install-galaxy:
     name: Install Galaxy and run a benchmark with ABM
-    runs-on: self-hosted
+    runs-on: ['self-hosted', '32core']
     steps:
       - uses: actions/checkout@v4
         with:
