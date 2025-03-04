@@ -70,7 +70,7 @@ jobs:
               - history_name: 2GB
                 inputs:
                 - name: Paired Collection
-                  collection: Subsample of reads from SRR24043307
+                  collection: ERR3485802
                 - name: GenBank genome
                   dataset_id: GRCh38.p14.gbff.gz
                 - name: Name for genome database
