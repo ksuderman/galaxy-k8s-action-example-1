@@ -72,7 +72,7 @@ jobs:
                 - name: Paired Collection
                   collection: ERR3485802
                 - name: GenBank genome
-                  dataset_id: GRCh38.p14.gbff.gz
+                  dataset_id: genome.genbank
                 - name: Name for genome database
                   value: h38          
           EOF
