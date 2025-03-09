@@ -4,6 +4,7 @@ on:
     inputs:
       values-file:
         description: 'Values file to use for the Galaxy Helm chart'
+        default: values.yml
         required: true
       workflow:
         description: 'URL to a Galaxy workflow to use for the benchmark'
